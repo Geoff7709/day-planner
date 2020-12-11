@@ -53,7 +53,7 @@ currentBlock()
 function renderTodos() {
   for (var i = 0; i < arrayOfKeys.length; i++) {
     console.log(arrayOfKeys[i])
-    console.log(textBlock[i].attr(data-index))
+    // console.log(textBlock[i].attr(data-index))
   }
 }
 renderTodos()
