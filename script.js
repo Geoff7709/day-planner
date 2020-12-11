@@ -17,7 +17,9 @@ parseInt($('#hr6').attr('data-mlt')),
 parseInt($('#hr7').attr('data-mlt')),
 parseInt($('#hr8').attr('data-mlt')),];
 var eventInput = $('.description');
-var arrayOfValues = Object.values(localStorage);
+var arrayOfKeys = Object.keys(localStorage);
+var translators = {}
+
 currentDay.text(todaysDate);
 
 // control color coding
@@ -33,7 +35,7 @@ function currentBlock() {
       if (timeBlock[i] < presentTime) {
           $(textBlock[i]).attr('class', 'past')
         } 
-      textBlock[i].text(arrayOfValues[i])       
+      console.log(arrayOfKeys)       
     }
 }
 currentBlock()
@@ -113,5 +115,8 @@ $('#btn8').click (newEvent8)
 
 function clearEvents() {
   localStorage.clear();
+  for (var i = 0; i < 8; i++){
+    textBlock[i].text('')
+  }
 }
 $('#delete-all').click(clearEvents)
