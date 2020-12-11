@@ -139,6 +139,9 @@ function newEvent8() {
 $('#btn8').click (newEvent8)
 
 function clearEvents() {
+  for (var i = 0; i < 8; i++){
+    textBlock[i].val('')
+  }
   localStorage.todo1 = 'Schedule Events';
   localStorage.todo2 = 'Schedule Events';
   localStorage.todo3 = 'Schedule Events';
@@ -147,8 +150,5 @@ function clearEvents() {
   localStorage.todo6 = 'Schedule Events';
   localStorage.todo7 = 'Schedule Events';
   localStorage.todo8 = 'Schedule Events';
-  for (var i = 0; i < 8; i++){
-    textBlock[i].text('')
-  }
 }
 $('#delete-all').click(clearEvents)
