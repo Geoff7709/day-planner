@@ -54,7 +54,7 @@ function renderTodos() {
       todo8: 8,
     }
   todoNum = translators[orderedKeys[i]]
-    console.log(JSON.parse(localStorage.getItem(orderedKeys[i])))
+    // console.log(JSON.parse(localStorage.getItem(orderedKeys[i])))
     console.log(todoNum) 
     // console.log(textBlock[i].attr('data-index') == todoNum)
     //  {
