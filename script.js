@@ -18,23 +18,14 @@ parseInt($('#hr7').attr('data-mlt')),
 parseInt($('#hr8').attr('data-mlt')),];
 var eventInput = $('.description');
 var arrayOfKeys = Object.keys(localStorage);
-
+var orderedKeys = arrayOfKeys.sort();
 
 currentDay.text(todaysDate);
-
+console.log(orderedKeys)
 // control color coding
 function currentBlock() {
   for (var i = 0; i < 8; i++) {
-    var translators = {
-      todo1: 9,
-      todo2: 10,
-      todo3: 11,
-      todo4: 12,
-      todo5: 1,
-      todo6: 2,
-      todo7: 3,
-      todo8: 4,
-    }
+    
     
     var presentTime = parseInt(moment().format('k'))
       if (timeBlock[i] == presentTime) {
@@ -51,9 +42,24 @@ function currentBlock() {
 }
 currentBlock()
 function renderTodos() {
-  for (var i = 0; i < arrayOfKeys.length; i++) {
-    console.log(arrayOfKeys[i])
-    // console.log(textBlock[i].attr(data-index))
+  for (var i = 0; i < timeBlock.length; i++) {
+    var translators ={
+      todo1: 1,
+      todo2: 2,
+      todo3: 3,
+      todo4: 4,
+      todo5: 5,
+      todo6: 6,
+      todo7: 7,
+      todo8: 8,
+    }
+  todoNum = translators[orderedKeys[i]]
+    console.log(JSON.parse(localStorage.getItem(orderedKeys[i])))
+    console.log(todoNum) 
+    // console.log(textBlock[i].attr('data-index') == todoNum)
+    //  {
+    //   textBlock[i].val(blockText)
+    // }
   }
 }
 renderTodos()
@@ -133,7 +139,14 @@ function newEvent8() {
 $('#btn8').click (newEvent8)
 
 function clearEvents() {
-  localStorage.clear();
+  localStorage.todo1 = 'Schedule Events';
+  localStorage.todo2 = 'Schedule Events';
+  localStorage.todo3 = 'Schedule Events';
+  localStorage.todo4 = 'Schedule Events';
+  localStorage.todo5 = 'Schedule Events';
+  localStorage.todo6 = 'Schedule Events';
+  localStorage.todo7 = 'Schedule Events';
+  localStorage.todo8 = 'Schedule Events';
   for (var i = 0; i < 8; i++){
     textBlock[i].text('')
   }
