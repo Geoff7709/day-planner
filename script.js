@@ -69,7 +69,7 @@ function newEvent1() {
   var newTodo = $(this).prev().val();
     localStorage.todo1 = JSON.stringify(newTodo);
     $('#txt1').val('')
-    $('#txt1').val(JSON.parse(localStorage.todo1)) 
+    $('#txt1').val(JSON.parse(localStorage.todo1) + ' noted: ' + moment().format('dddd, MMMM Do')) 
 }
 
 $('#btn1').click (newEvent1)
@@ -78,7 +78,7 @@ function newEvent2() {
   var newTodo = $(this).prev().val();
     localStorage.todo2 = JSON.stringify(newTodo);
     $('#txt2').val('')
-    $('#txt2').val(JSON.parse(localStorage.todo2))
+    $('#txt2').val(JSON.parse(localStorage.todo2) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn2').click (newEvent2)
@@ -88,7 +88,7 @@ function newEvent3() {
   var newTodo = $(this).prev().val();
     localStorage.todo3 = JSON.stringify(newTodo);
     $('#txt3').val('')
-    $('#txt3').val(JSON.parse(localStorage.todo3))
+    $('#txt3').val(JSON.parse(localStorage.todo3) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn3').click (newEvent3)
@@ -97,7 +97,7 @@ function newEvent4() {
   var newTodo = $(this).prev().val();
     localStorage.todo4 = JSON.stringify(newTodo);
     $('#txt4').val('')
-    $('#txt4').val(JSON.parse(localStorage.todo4))
+    $('#txt4').val(JSON.parse(localStorage.todo4) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn4').click (newEvent4)
@@ -106,7 +106,7 @@ function newEvent5() {
   var newTodo = $(this).prev().val();
     localStorage.todo5 = JSON.stringify(newTodo);
     $('#txt5').val('')
-    $('#txt5').val(JSON.parse(localStorage.todo5))
+    $('#txt5').val(JSON.parse(localStorage.todo5) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn5').click (newEvent5)
@@ -115,7 +115,7 @@ function newEvent6() {
   var newTodo = $(this).prev().val()
     localStorage.todo6 = JSON.stringify(newTodo);
     $('#txt6').val('')
-    $('#txt6').val(JSON.parse(localStorage.todo6))
+    $('#txt6').val(JSON.parse(localStorage.todo6) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn6').click (newEvent6)
@@ -124,7 +124,7 @@ function newEvent7() {
   var newTodo = $(this).prev().val();
     localStorage.todo7 = JSON.stringify(newTodo);
     $('#txt7').val('')
-    $('#txt7').val(JSON.parse(localStorage.todo7))
+    $('#txt7').val(JSON.parse(localStorage.todo7) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn7').click (newEvent7)
@@ -133,7 +133,7 @@ function newEvent8() {
   var newTodo = $(this).prev().val();
     localStorage.todo8 = JSON.stringify(newTodo);
     $('#txt8').val('')
-    $('#txt8').val(JSON.parse(localStorage.todo8))
+    $('#txt8').val(JSON.parse(localStorage.todo8) + ' noted: ' + moment().format('dddd, MMMM Do'))
 }
 
 $('#btn8').click (newEvent8)
