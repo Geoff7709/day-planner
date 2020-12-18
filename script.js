@@ -142,13 +142,13 @@ function clearEvents() {
   for (var i = 0; i < 8; i++){
     textBlock[i].val('')
   }
-  localStorage.todo1 = '';
-  localStorage.todo2 = '';
-  localStorage.todo3 = '';
-  localStorage.todo4 = '';
-  localStorage.todo5 = '';
-  localStorage.todo6 = '';
-  localStorage.todo7 = '';
-  localStorage.todo8 = '';
+  localStorage.setItem("todo1", '');
+  localStorage.setItem("todo2", '');
+  localStorage.setItem("todo3", '');
+  localStorage.setItem("todo4", '');
+  localStorage.setItem("todo5", '');
+  localStorage.setItem("todo6", '');
+  localStorage.setItem("todo7", '');
+  localStorage.setItem("todo8", '');
 }
 $('#delete-all').click(clearEvents)
